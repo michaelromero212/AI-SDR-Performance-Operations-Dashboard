@@ -147,6 +147,33 @@ Located in `/docs`:
 - **React Dashboard**: http://localhost:3000
 - **Dash Analytics**: http://localhost:8050
 
+## 🖼️ Features in Action
+
+### Lead Management
+Comprehensive lead database with AI-powered qualification, filtering, and bulk operations. Import leads via CSV and qualify them with a single click.
+
+![Lead Manager](screenshots/lead-manager.jpg)
+
+### AI Agent Monitoring
+Real-time agent status, LLM configuration, and live activity feed showing agent decisions and escalations.
+
+![Agent Monitor](screenshots/agent-monitor.jpg)
+
+### QA Testing Suite
+Automated test scenarios across data quality, agent behavior, governance, and edge cases with pass/fail tracking.
+
+![QA Testing](screenshots/qa-testing.jpg)
+
+### Advanced Analytics
+A/B test comparison of prompt variants and conversion funnel visualization to optimize performance.
+
+![Analytics - A/B Testing](screenshots/analytics-ab-test.jpg)
+
+### Cohort Analysis
+Performance breakdowns by industry and company size to identify high-value segments.
+
+![Analytics - Cohorts](screenshots/analytics-cohorts.jpg)
+
 ## 📊 Usage Guide
 
 ### 1. Import Leads
