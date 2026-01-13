@@ -20,6 +20,48 @@ This platform simulates a real-world AI SDR system with complete operational inf
 
 **Built for:** Demonstrating AI Operations/Applied AI expertise for technical portfolios and interviews
 
+## 💡 The Challenge
+
+Managing AI sales agents at scale requires more than just deploying an LLM. Organizations need:
+- **Quality Assurance**: Ensuring AI outputs meet brand standards and compliance requirements
+- **Governance**: Preventing AI from making unauthorized commitments (pricing, contracts)
+- **Monitoring**: Real-time visibility into agent performance and decision-making
+- **Optimization**: Data-driven insights to improve conversion rates and A/B test prompts
+
+This platform demonstrates a complete solution for operationalizing AI SDRs with production-grade infrastructure.
+
+## 🖼️ Features in Action
+
+### Performance Dashboard
+Real-time KPIs showing total leads, qualification rate, reply rate, and meeting rate. Includes performance trends and recent agent activity.
+
+![Dashboard](screenshots/dashboard.jpg)
+
+### Lead Management
+Comprehensive lead database with AI-powered qualification, filtering, and bulk operations. Import leads via CSV and qualify them with a single click.
+
+![Lead Manager](screenshots/lead-manager.jpg)
+
+### AI Agent Monitoring
+Real-time agent status, LLM configuration, and live activity feed showing agent decisions and escalations.
+
+![Agent Monitor](screenshots/agent-monitor.jpg)
+
+### QA Testing Suite
+Automated test scenarios across data quality, agent behavior, governance, and edge cases with pass/fail tracking.
+
+![QA Testing](screenshots/qa-testing.jpg)
+
+### Advanced Analytics
+A/B test comparison of prompt variants and conversion funnel visualization to optimize performance.
+
+![Analytics - A/B Testing](screenshots/analytics-ab-test.jpg)
+
+### Cohort Analysis
+Performance breakdowns by industry and company size to identify high-value segments.
+
+![Analytics - Cohorts](screenshots/analytics-cohorts.jpg)
+
 ## 🏗️ Architecture
 
 ```
@@ -146,38 +188,6 @@ Located in `/docs`:
 - **API Documentation**: http://localhost:8000/docs (Interactive Swagger UI)
 - **React Dashboard**: http://localhost:3000
 - **Dash Analytics**: http://localhost:8050
-
-## 🖼️ Features in Action
-
-### Performance Dashboard
-Real-time KPIs showing total leads, qualification rate, reply rate, and meeting rate. Includes performance trends and recent agent activity.
-
-![Dashboard](screenshots/dashboard.jpg)
-
-### Lead Management
-Comprehensive lead database with AI-powered qualification, filtering, and bulk operations. Import leads via CSV and qualify them with a single click.
-
-![Lead Manager](screenshots/lead-manager.jpg)
-
-### AI Agent Monitoring
-Real-time agent status, LLM configuration, and live activity feed showing agent decisions and escalations.
-
-![Agent Monitor](screenshots/agent-monitor.jpg)
-
-### QA Testing Suite
-Automated test scenarios across data quality, agent behavior, governance, and edge cases with pass/fail tracking.
-
-![QA Testing](screenshots/qa-testing.jpg)
-
-### Advanced Analytics
-A/B test comparison of prompt variants and conversion funnel visualization to optimize performance.
-
-![Analytics - A/B Testing](screenshots/analytics-ab-test.jpg)
-
-### Cohort Analysis
-Performance breakdowns by industry and company size to identify high-value segments.
-
-![Analytics - Cohorts](screenshots/analytics-cohorts.jpg)
 
 ## 📊 Usage Guide
 
