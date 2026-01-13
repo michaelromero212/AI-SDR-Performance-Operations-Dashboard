@@ -8,14 +8,13 @@ function QATesting() {
 
     useEffect(() => {
         loadScenarios();
-    }, [filter]);
+    }, []); // Only load once on mount
 
     const loadScenarios = async () => {
         try {
             setLoading(true);
-            const response = await analyticsAPI.testScenarios(
-                filter === 'all' ? undefined : filter
-            );
+            // Always fetch ALL scenarios (no filter on API)
+            const response = await analyticsAPI.testScenarios();
             setScenarios(response.data);
         } catch (error) {
             console.error('Failed to load scenarios from API, using mock data:', error);
@@ -87,7 +86,10 @@ function QATesting() {
         }
     ];
 
-    const filteredScenarios = scenarios;
+    // Filter scenarios on the frontend
+    const filteredScenarios = filter === 'all'
+        ? scenarios
+        : scenarios.filter(s => s.category === filter);
 
     const categories = [
         { value: 'all', label: 'All Categories', count: scenarios.length },
