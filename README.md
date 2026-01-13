@@ -149,6 +149,11 @@ Located in `/docs`:
 
 ## 🖼️ Features in Action
 
+### Performance Dashboard
+Real-time KPIs showing total leads, qualification rate, reply rate, and meeting rate. Includes performance trends and recent agent activity.
+
+![Dashboard](screenshots/dashboard.jpg)
+
 ### Lead Management
 Comprehensive lead database with AI-powered qualification, filtering, and bulk operations. Import leads via CSV and qualify them with a single click.
 
