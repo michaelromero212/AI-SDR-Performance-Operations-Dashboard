@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "scenario_name": "Valid Lead - Complete Data",
+        "category": "data_quality",
+        "input_data": "{\"company_name\": \"TechCorp\", \"industry\": \"SaaS\", \"company_size\": \"500-2000\", \"contact_email\": \"john@techcorp.com\", \"contact_name\": \"John Doe\"}",
+        "expected_behavior": "Should pass all validation checks with 100% quality score"
+    },
+    {
+        "id": 2,
+        "scenario_name": "Missing Required Field - Email",
+        "category": "data_quality",
+        "input_data": "{\"company_name\": \"TestCo\", \"industry\": \"Finance\"}",
+        "expected_behavior": "Should flag missing email as critical issue"
+    },
+    {
+        "id": 3,
+        "scenario_name": "Invalid Email Format",
+        "category": "data_quality",
+        "input_data": "{\"company_name\": \"BadEmail Inc\", \"contact_email\": \"notanemail\"}",
+        "expected_behavior": "Should reject invalid email format"
+    },
+    {
+        "id": 4,
+        "scenario_name": "Duplicate Email Detection",
+        "category": "data_quality",
+        "input_data": "[{\"contact_email\": \"duplicate@test.com\"}, {\"contact_email\": \"duplicate@test.com\"}]",
+        "expected_behavior": "Should identify and flag duplicate emails"
+    },
+    {
+        "id": 5,
+        "scenario_name": "Lead Qualification - High Score",
+        "category": "agent_behavior",
+        "input_data": "{\"company_name\": \"PerfectFit Corp\", \"industry\": \"SaaS\", \"company_size\": \"500-2000\"}",
+        "expected_behavior": "Should qualify lead with score >= 70"
+    },
+    {
+        "id": 6,
+        "scenario_name": "Lead Qualification - Low Score",
+        "category": "agent_behavior",
+        "input_data": "{\"company_name\": \"Tiny Shop\", \"industry\": \"Unknown\", \"company_size\": \"1-10\"}",
+        "expected_behavior": "Should disqualify lead with score < 60"
+    },
+    {
+        "id": 7,
+        "scenario_name": "Email Generation - Personalization",
+        "category": "agent_behavior",
+        "input_data": "{\"company_name\": \"HealthTech\", \"industry\": \"Healthcare\", \"contact_name\": \"Dr. Smith\"}",
+        "expected_behavior": "Should personalize email based on healthcare industry"
+    },
+    {
+        "id": 8,
+        "scenario_name": "Governance - Pricing Discussion",
+        "category": "governance",
+        "input_data": "{\"email_content\": \"Our pricing starts at $1000 per month\"}",
+        "expected_behavior": "Should escalate due to pricing discussion without approval"
+    },
+    {
+        "id": 9,
+        "scenario_name": "Governance - Competitor Mention",
+        "category": "governance",
+        "input_data": "{\"company_name\": \"Salesforce Partner Inc\"}",
+        "expected_behavior": "Should escalate when competitor is mentioned"
+    },
+    {
+        "id": 10,
+        "scenario_name": "Governance - Missing Critical Data",
+        "category": "governance",
+        "input_data": "{\"company_name\": \"MysteryCompany\"}",
+        "expected_behavior": "Should escalate when industry and size are missing"
+    },
+    {
+        "id": 11,
+        "scenario_name": "Edge Case - Special Characters in Name",
+        "category": "edge_cases",
+        "input_data": "{\"company_name\": \"Café & Bar's Ltd.\", \"contact_name\": \"François O'Brien\"}",
+        "expected_behavior": "Should handle special characters correctly"
+    },
+    {
+        "id": 12,
+        "scenario_name": "Edge Case - Very Long Company Name",
+        "category": "edge_cases",
+        "input_data": "{\"company_name\": \"International Global Worldwide Solutions for Enterprise Business Management Systems Corporation Limited\"}",
+        "expected_behavior": "Should handle or truncate long names appropriately"
+    },
+    {
+        "id": 13,
+        "scenario_name": "Edge Case - International Lead",
+        "category": "edge_cases",
+        "input_data": "{\"company_name\": \"日本テクノロジー\", \"contact_email\": \"info@japan-tech.jp\"}",
+        "expected_behavior": "Should handle international characters"
+    },
+    {
+        "id": 14,
+        "scenario_name": "A/B Test - Variant A vs B",
+        "category": "ab_testing",
+        "input_data": "{\"lead_data\": {\"company_name\": \"TestCo\"}, \"variants\": [\"A\", \"B\"]}",
+        "expected_behavior": "Should produce different outputs for variants A and B"
+    },
+    {
+        "id": 15,
+        "scenario_name": "Performance - Batch Processing",
+        "category": "performance",
+        "input_data": "{\"lead_count\": 100}",
+        "expected_behavior": "Should process 100 leads within acceptable time limit"
+    }
+]
